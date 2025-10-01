@@ -32,9 +32,9 @@ AFRAME.registerComponent("basicsyntax", {
     camera_position = camera.getAttribute('position');
 
     this.el.setAttribute("position", {
-      x: camera_position.x - 0,
-      y: camera_position.y - 9,
-      z: camera_position.z - 9,
+      x: camera_position.x - 1.36,
+      y: camera_position.y - 1.59,
+      z: camera_position.z - 4.28,
     });
   },
 

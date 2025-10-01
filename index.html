@@ -4,15 +4,22 @@
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
         <script src="movement.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
     </head>
     <body>
-        <a-scene>
+        <a-scene physics="gravity:0">
             <a-assets>
                 <a-asset-item src="cartoon_turtle/scene.gltf" id="ct" ></a-asset-item>
                 <a-asset-item src="islands/scene.gltf" id="Is"></a-asset-item>
                 <a-asset-item src="researcher/scene.gltf" id="rr"></a-asset-item>
             </a-assets>
-            <a-entity id="look" kinematic-body look-controls wasd-controls="acceleration: 200" camera position="-10 -18 -20"></a-entity>
+            <a-entity id="look" kinematic-body look-controls wasd-controls="acceleration: 200" camera position="-1.02 1.59 -0.344" rotation="-15.4 106.8 -128.6">
+                <a-entity position="-5 5 -12">
+                    <a-entity position="-0.6 0.13 0" text="font:aileronsemibold;width:12;color:blue;value:TURTLES\n To Be Rescued"></a-entity>
+                    <a-entity position="-8 0.3 0" text="font:exo2bold;width:30;color:purple;value:5;align:center;"></a-entity>
+                    <a-entity position="15 0.3 0" text="font:exo2bold;width:30;color:purple;align:center;"></a-entity>
+                </a-entity>
+            </a-entity>
             <a-entity gltf-model="#Is"></a-entity>
             <a-entity gltf-model="#ct" id="c1"></a-entity>
             <a-entity gltf-model="#rr" position="-2.38 0 -4.63" rotation="180 -10 180" basicsyntax></a-entity>
